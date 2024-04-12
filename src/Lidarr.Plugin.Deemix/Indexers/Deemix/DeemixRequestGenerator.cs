@@ -16,13 +16,6 @@ namespace NzbDrone.Core.Indexers.Deemix
         {
             var pageableRequests = new IndexerPageableRequestChain();
 
-            var url = $"{Settings.BaseUrl.TrimEnd('/')}/api/newReleases";
-
-            pageableRequests.Add(new[]
-            {
-                new IndexerRequest(url, HttpAccept.Json)
-            });
-
             return pageableRequests;
         }
 
